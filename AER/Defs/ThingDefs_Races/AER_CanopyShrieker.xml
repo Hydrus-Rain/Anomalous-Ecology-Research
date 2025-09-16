@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="AnimalBase">
+    <defName>AER_CanopyShrieker</defName>
+    <label>Canopy Shrieker</label>
+    <description>TBA</description>
+    <graphicData>
+      <texPath>Things/Animals/Primal/Shrubgrazer</texPath>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <category>Pawn</category>
+    <race>
+      <body>Body_CanopyShrieker</body>
+      <meatLabel>Canopy Shrieker meat</meatLabel>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <baseHungerRate>0.45</baseHungerRate>
+      <trainability>Intermediate</trainability>
+      <wildness>0.7</wildness>
+      <predator>true</predator>
+      <isFlesh>true</isFlesh>
+    </race>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <Mass>40</Mass>
+      <Flammability>0.25</Flammability>
+    </statBases>
+  </ThingDef>
+  <BodyDef>
+    <defName>Body_AER_CanopyShrieker</defName>
+    <label>aer_canopyshrieker body</label>
+    <corePart>
+      <def>Torso</def>
+      <parts>
+        <li>
+          <def>Head</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Torso</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Legs</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Tail</def>
+          <coverage>0.25</coverage>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+</Defs>

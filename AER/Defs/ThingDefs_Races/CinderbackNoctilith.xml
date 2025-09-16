@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="AnimalBase">
+    <defName>CinderbackNoctilith</defName>
+    <label>cinderback noctilith</label>
+    <description>TBA</description>
+    <graphicData>
+      <texPath>Things/Animals/Primal/Shrubgrazer</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <category>Pawn</category>
+    <race>
+      <body>Body_CinderbackNoctilith</body>
+      <meatLabel>noctilith meat</meatLabel>
+      <leatherDef>Leather_Scaled</leatherDef>
+      <baseBodySize>0.6</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <baseHungerRate>0.35</baseHungerRate>
+      <trainability>Simple</trainability>
+      <wildness>0.5</wildness>
+      <predator>false</predator>
+      <isFlesh>true</isFlesh>
+    </race>
+    <statBases>
+      <MarketValue>70</MarketValue>
+      <Mass>40</Mass>
+      <Flammability>0.45</Flammability>
+    </statBases>
+  </ThingDef>
+  <PawnKindDef>
+    <defName>AER_CinderbackNoctilith_PawnKind</defName>
+    <kindLabel>cinderback noctilith</kindLabel>
+    <race>CinderbackNoctilith</race>
+    <combatPower>45</combatPower>
+    <label>cinderbacknoctilith</label>
+    <description>TBA</description>
+  </PawnKindDef>
+  <BodyDef>
+    <defName>Body_CinderbackNoctilith</defName>
+    <label>cinderback noctilith body</label>
+    <description>TBA</description>
+    <lastPart>Torso</lastPart>
+    <parts>
+      <li>
+        <label>Head</label>
+        <coverage>0.06</coverage>
+      </li>
+      <li>
+        <label>Torso</label>
+        <coverage>0.40</coverage>
+      </li>
+      <li>
+        <label>LeftWing</label>
+        <coverage>0.22</coverage>
+      </li>
+      <li>
+        <label>RightWing</label>
+        <coverage>0.22</coverage>
+      </li>
+      <li>
+        <label>WingMembranes</label>
+        <coverage>0.24</coverage>
+      </li>
+      <li>
+        <label>Hindlimbs</label>
+        <coverage>0.15</coverage>
+      </li>
+      <li>
+        <label>Tail</label>
+        <coverage>0.15</coverage>
+      </li>
+    </parts>
+  </BodyDef>
+</Defs>

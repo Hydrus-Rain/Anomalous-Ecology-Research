@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="DeciduousTreeBase">
+    <defName>AER_Lithowood</defName>
+    <label>lithowood tree</label>
+    <description>A special tree known for its Flame Resistant, rock-like bark, hence the name.</description>
+    <graphicData>
+      <texPath>Things/Plants/Primal/Lithowood</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <harvestWork>1400</harvestWork>
+      <harvestYield>86</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+      <harvestedThingDef>AER_Petrilogs</harvestedThingDef>
+    </plant>
+  </ThingDef>
+</Defs>

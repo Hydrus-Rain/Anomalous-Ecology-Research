@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="AnimalBase">
+    <defName>AER_AshenSkulker</defName>
+    <label>Asher Skulker</label>
+    <description>TBA</description>
+    <graphicData>
+      <texPath>Things/Animals/Primal/Shrubgrazer</texPath>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <category>Pawn</category>
+    <race>
+      <body>Body_AshenSkulker</body>
+      <meatLabel>Ashen Skulker meat</meatLabel>
+      <leatherDef>Leather_Hide</leatherDef>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>1.4</baseHealthScale>
+      <baseHungerRate>0.8</baseHungerRate>
+      <trainability>Advanced</trainability>
+      <wildness>0.75</wildness>
+      <predator>true</predator>
+      <isFlesh>true</isFlesh>
+    </race>
+    <statBases>
+      <MarketValue>220</MarketValue>
+      <Mass>260</Mass>
+      <Flammability>0.18</Flammability>
+    </statBases>
+  </ThingDef>
+  <BodyDef>
+    <defName>Body_AER_AshenSkulker</defName>
+    <label>aer_ashenskulker body</label>
+    <corePart>
+      <def>Torso</def>
+      <parts>
+        <li>
+          <def>Head</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Torso</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Legs</def>
+          <coverage>0.25</coverage>
+        </li>
+        <li>
+          <def>Tail</def>
+          <coverage>0.25</coverage>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+</Defs>
