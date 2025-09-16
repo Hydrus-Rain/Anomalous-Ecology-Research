@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="AnimalBase">
+    <defName>BonecrustBehemoth</defName>
+    <label>bonecrust behemoth</label>
+    <description>TBA</description>
+    <graphicData>
+      <texPath>Things/Animals/Primal/Shrubgrazer</texPath>
+      <drawSize>4.6</drawSize>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <category>Pawn</category>
+    <race>
+      <body>Body_BonecrustBehemoth</body>
+      <meatLabel>Bonecrust meat</meatLabel>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <baseBodySize>4.8</baseBodySize>
+      <baseHealthScale>3.8</baseHealthScale>
+      <baseHungerRate>1.9</baseHungerRate>
+      <trainability>Impossible</trainability>
+      <wildness>0.95</wildness>
+      <predator>false</predator>
+      <isFlesh>true</isFlesh>
+    </race>
+    <statBases>
+      <MarketValue>700</MarketValue>
+      <Mass>1200</Mass>
+      <Flammability>0.05</Flammability>
+    </statBases>
+  </ThingDef>
+  <PawnKindDef>
+    <defName>AER_BonecrustBehemoth_PawnKind</defName>
+    <kindLabel>bonecrust behemoth</kindLabel>
+    <race>BonecrustBehemoth</race>
+    <combatPower>1200</combatPower>
+    <label>bonecrustbehemoth</label>
+    <description>TBA</description>
+  </PawnKindDef>
+  <BodyDef>
+    <defName>Body_BonecrustBehemoth</defName>
+    <label>Bonecrust behemoth body</label>
+    <description>TBA</description>
+    <lastPart>Torso</lastPart>
+    <parts>
+      <li>
+        <label>Head</label>
+        <coverage>0.07</coverage>
+      </li>
+      <li>
+        <label>Torso</label>
+        <coverage>0.72</coverage>
+      </li>
+      <li>
+        <label>Legs</label>
+        <coverage>0.13</coverage>
+      </li>
+      <li>
+        <label>ArmorPlates</label>
+        <coverage>0.08</coverage>
+      </li>
+    </parts>
+  </BodyDef>
+</Defs>
