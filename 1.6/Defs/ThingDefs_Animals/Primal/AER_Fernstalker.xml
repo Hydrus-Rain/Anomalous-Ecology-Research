@@ -1,0 +1,122 @@
+?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>AER_Fernstalker</defName>
+    <label>Primal Fernstalker</label>
+    <description>A medium sized reptile that stalks the Primal Jungles it calls its home. With its quick movements, and Green hide that blends in well with the foliage, it is quite the sucessful ambush predator.</description>
+    <statBases>
+      <MoveSpeed>6</MoveSpeed>
+      <MarketValue>650</MarketValue>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>65</ComfyTemperatureMax>
+      <FilthRate>1.0</FilthRate>
+      <Wildness>0.65</Wildness>
+    </statBases>
+    <race>
+      <meatLabel>Reptile meat</meatLabel>
+      <petness>0.6</petness>
+      <body>Body_Fernstakler</body>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.65</baseBodySize>
+      <baseHealthScale>1.3</baseHealthScale>
+      <baseHungerRate>0.30</baseHungerRate>
+      <foodType>CarnivoreAnimalStrict</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>0.5</maxPreyBodySize>
+      <lifeExpectancy>10</lifeExpectancy>
+      <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
+      <nuzzleMtbHours>12</nuzzleMtbHours>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBabyTiny</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.11</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.25</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>AER_FernstalkerEggFertilized</eggFertilizedDef>
+        <eggUnfertilizedDef>AER_FernstalkerEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizationCountMax>3</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~3</eggCountRange>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>AnimalPet</li>
+      <li>AnimalFighter</li>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+    <modExtensions>
+      <li MayRequire="Mlie.XNDNocturnalAnimals,OskarPotocki.VanillaFactionsExpanded.Core" Class="NocturnalAnimals.ExtendedRaceProperties">
+        <bodyClock>Nocturnal</bodyClock>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>AER_Fernstalker</defName>
+    <label>Fernstalker</label>
+    <race>AER_Fernstalker</race>
+    <combatPower>175</combatPower>
+    <wildGroupSize>2~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Animals/Primal/Fernstalker</texPath>
+          <drawSize>.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
+          <drawSize>.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Animals/Primal/Fernstalker</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Animals/Primal/Fernstalker</texPath>
+          <drawSize>2.2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
+          <drawSize>2.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>
