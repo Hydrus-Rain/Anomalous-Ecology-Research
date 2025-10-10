@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+    <ThingDef ParentName="LeatherBase">
+    <defName>AER_PrimalLeather</defName>
+    <label>Primal Leather</label>
+    <description>The Leathery Hide obtained from the native denizens of the Primal Jungles. Despite their Various forms, their leather is near identical to each other, suggesting a common ancestor.Mainly resistant to cuts and scratches, it does not insulate well, and is susceptible to blunt attacks.</description>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <StuffPower_Armor_Sharp>0.90</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Items/Primal/PrimalLeather</texPath>
+    </graphicData>
+    <stuffProps>
+      <commonality>0.0055</commonality>
+      <statFactors>
+        <MaxHitPoints>1.0</MaxHitPoints>
+        <Beauty>1.2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

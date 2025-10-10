@@ -18,6 +18,7 @@
       <Flammability>1</Flammability>
       <MaxHitPoints>40</MaxHitPoints>
     </statBases>
+	
     <plant>
       <fertilityMin>0.7</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
@@ -36,67 +37,12 @@
       <wildClusterRadius>4.0</wildClusterRadius>
       <wildClusterWeight>85</wildClusterWeight>
       <wildOrder>2</wildOrder>
+	  <immatureGraphicPath>Things/Plants/Primal/Genobulb_Bush_Immature</immatureGraphicPath>
     </plant>
+	
     <ingestible>
       <preferability>NeverForNutrition</preferability>
       <foodType>Plant</foodType>
     </ingestible>
-    <thingCategories>
-      <li>Plants</li>
-    </thingCategories>
-    <lifeStages>
-      <li>
-        <minGrowth>0.0</minGrowth>
-        <label>seedling</label>
-        <statBases>
-          <Beauty>-1</Beauty>
-        </statBases>
-        <graphicData>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <texPath>Things/Plants/Primal/Genobulb_Bush_Immature</texPath>
-          <shaderType>CutoutPlant</shaderType>
-          <drawSize>(1.0,1.0)</drawSize>
-        </graphicData>
-      </li>
-      <li>
-        <minGrowth>0.5</minGrowth>
-        <label>growing</label>
-        <statBases>
-          <Beauty>0</Beauty>
-        </statBases>
-        <graphicData>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <texPath>Things/Plants/Primal/Genobulb_Bush</texPath>
-          <shaderType>CutoutPlant</shaderType>
-          <drawSize>(1.5,1.5)</drawSize>
-        </graphicData>
-      </li>
-      <li>
-        <minGrowth>0.8</minGrowth>
-        <label>harvestable</label>
-        <statBases>
-          <Beauty>1</Beauty>
-        </statBases>
-        <graphicData>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <texPath>Things/Plants/Primal/Genobulb_Bush_Harvest</texPath>
-          <shaderType>CutoutPlant</shaderType>
-          <drawSize>(1.8,1.8)</drawSize>
-        </graphicData>
-      </li>
-      <li>
-        <minGrowth>1.0</minGrowth>
-        <label>mature</label>
-        <statBases>
-          <Beauty>2</Beauty>
-        </statBases>
-        <graphicData>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <texPath>Things/Plants/Primal/Genobulb_Bush_Mature</texPath>
-          <shaderType>CutoutPlant</shaderType>
-          <drawSize>(2.0,2.0)</drawSize>
-        </graphicData>
-      </li>
-    </lifeStages>
   </ThingDef>
 </Defs>

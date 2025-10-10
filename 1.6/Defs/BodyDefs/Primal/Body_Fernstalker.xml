@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Defs>
     <BodyDef>
-    <defName>Body_Fernstalker</defName>
+    <defName>AER_Body_Fernstalker</defName>
     <label>fernstalker</label>
     <corePart>
       <def>Body</def>
@@ -284,4 +284,5 @@
       </parts>
     </corePart>
   </BodyDef>
+
 </Defs>

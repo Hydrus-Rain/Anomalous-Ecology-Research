@@ -2,119 +2,155 @@
 <Defs>
   <ThingDef ParentName="AnimalThingBase">
     <defName>AER_Fernstalker</defName>
-    <label>Primal Fernstalker</label>
-    <description>A medium sized reptile that stalks the Primal Jungles it calls its home. With its quick movements, and Green hide that blends in well with the foliage, it is quite the sucessful ambush predator.</description>
+    <label>Fernstalker</label>
+    <description>A large venomous lizard tht prowls the Primal Jungles. They secrete toxins from venom glands in their lower jaw to neutralize their prey.</description>
     <statBases>
-      <MoveSpeed>6</MoveSpeed>
-      <MarketValue>650</MarketValue>
+      <MoveSpeed>3.6</MoveSpeed>
+      <MarketValue>175</MarketValue>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
-      <ComfyTemperatureMax>65</ComfyTemperatureMax>
-      <FilthRate>1.0</FilthRate>
-      <Wildness>0.65</Wildness>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <ToxicEnvironmentResistance>0.95</ToxicEnvironmentResistance>
+      <ToxicResistance>0.9</ToxicResistance>
+      <Wildness>0.5</Wildness>
     </statBases>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>ToxicBite</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>AER_FernstalkerEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>AER_FernstalkerEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>6</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
     <race>
-      <meatLabel>Reptile meat</meatLabel>
-      <petness>0.6</petness>
-      <body>Body_Fernstakler</body>
-      <leatherDef>Leather_Lizard</leatherDef>
-      <herdAnimal>true</herdAnimal>
-      <baseBodySize>0.65</baseBodySize>
-      <baseHealthScale>1.3</baseHealthScale>
-      <baseHungerRate>0.30</baseHungerRate>
-      <foodType>CarnivoreAnimalStrict</foodType>
+      <body>AER_Body_Fernstalker</body>
       <predator>true</predator>
-      <maxPreyBodySize>0.5</maxPreyBodySize>
-      <lifeExpectancy>10</lifeExpectancy>
-      <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
-      <nuzzleMtbHours>12</nuzzleMtbHours>
-      <nameOnTameChance>1</nameOnTameChance>
-      <trainability>Advanced</trainability>
-      <specialTrainables>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
-      </specialTrainables>
+      <maxPreyBodySize>0.85</maxPreyBodySize>
+      <baseBodySize>0.6</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <baseHungerRate>0.2</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>AER_PrimalLeather</leatherDef>
+      <trainability>None</trainability>
+      <petness>0.15</petness>
+      <lifeExpectancy>12</lifeExpectancy>
+      <soundEating>Reptile_Eat</soundEating>
       <lifeStageAges>
         <li>
-          <def>AnimalBabyTiny</def>
+          <def>AnimalBaby</def>
           <minAge>0</minAge>
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.11</minAge>
+          <minAge>0.1</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.25</minAge>
+          <minAge>0.2222</minAge>
+          <soundWounded>Pawn_Iguana_Wounded</soundWounded>
+          <soundDeath>Pawn_Iguana_Death</soundDeath>
+          <soundCall>Pawn_Iguana_Call</soundCall>
+          <soundAngry>Pawn_Iguana_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(-0.01, 0, 0.3)</li>
+        <li>(0.35, 0, 0.05)</li>
+        <li>(0.0, 0, -0.24)</li>
+        <li>(-0.35, 0, 0.05)</li>
+      </headPosPerRotation>
     </race>
-    <comps>
-      <li Class="CompProperties_EggLayer">
-        <eggFertilizedDef>AER_FernstalkerEggFertilized</eggFertilizedDef>
-        <eggUnfertilizedDef>AER_FernstalkerEggUnfertilized</eggUnfertilizedDef>
-        <eggFertilizationCountMax>3</eggFertilizationCountMax>
-        <eggLayIntervalDays>10</eggLayIntervalDays>
-        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>1~3</eggCountRange>
-      </li>
-    </comps>
     <tradeTags>
-      <li>AnimalPet</li>
-      <li>AnimalFighter</li>
       <li>AnimalUncommon</li>
+      <li>AnimalPet</li>
     </tradeTags>
-    <modExtensions>
-      <li MayRequire="Mlie.XNDNocturnalAnimals,OskarPotocki.VanillaFactionsExpanded.Core" Class="NocturnalAnimals.ExtendedRaceProperties">
-        <bodyClock>Nocturnal</bodyClock>
-      </li>
-    </modExtensions>
   </ThingDef>
+
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>AER_Fernstalker</defName>
     <label>Fernstalker</label>
     <race>AER_Fernstalker</race>
-    <combatPower>175</combatPower>
-    <wildGroupSize>2~5</wildGroupSize>
+    <combatPower>60</combatPower>
+    <ecoSystemWeight>0.30</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>Things/Animals/Primal/Fernstalker</texPath>
-          <drawSize>.9</drawSize>
+          <drawSize>1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
-          <drawSize>.9</drawSize>
+          <drawSize>1</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Animals/Primal/Fernstalker</texPath>
           <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.3, 0.3)</volume>
-            <offset>(0,0,-0.3)</offset>
-          </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
-          <drawSize>1.5</drawSize>
+          <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Animals/Primal/Fernstalker</texPath>
-          <drawSize>2.2</drawSize>
+          <drawSize>3</drawSize>
           <shadowData>
-            <volume>(0.4, 0.4, 0.4)</volume>
-            <offset>(0,0,-0.2)</offset>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,0)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Animals/Primal/Dessicated_Fernstalker</texPath>
-          <drawSize>2.2</drawSize>
+          <drawSize>3.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

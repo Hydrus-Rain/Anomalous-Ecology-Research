@@ -18,7 +18,7 @@
       <meatLabel>Reptile meat</meatLabel>
       <petness>0.6</petness>
       <body>Body_ViridianRaptor</body>
-      <leatherDef>Leather_Lizard</leatherDef>
+      <leatherDef>AER_PrimalLeather</leatherDef>
       <herdAnimal>true</herdAnimal>
       <baseBodySize>0.65</baseBodySize>
       <baseHealthScale>1.3</baseHealthScale>
@@ -62,80 +62,52 @@
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1~3</eggCountRange>
       </li>
-      <li Class="BiomesCore.CompProperties_PackHunter">
-        <joinHuntRange>24</joinHuntRange>
-        <packConfidenceBonusPerMember>0.25</packConfidenceBonusPerMember>
-      </li>
-      <li Class="BiomesCore.CompProperties_PackDefense">
-        <baseChance>0.3</baseChance>
-        <attackerMaxDistance>30</attackerMaxDistance>
-        <joinDefenseRange>20</joinDefenseRange>
-        <joinMaxPain>0.3</joinMaxPain>
-        <maxNumMeleeAttacks>3</maxNumMeleeAttacks>
-        <expiryInterval>500</expiryInterval>
-        <attackDoorIfTargetLost>true</attackDoorIfTargetLost>
-        <canBashFences>false</canBashFences>
-        <predatorConfidencePenalty>100</predatorConfidencePenalty>
-      </li>
     </comps>
     <tools>
-      <li>
-        <label>left claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>left sickle claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>RearLeftClaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right sickle claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>RearRightClaw</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>12</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.7</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
+			<li>
+				<label>claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.55</cooldownTime>
+				<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.85</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>8</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>1.65</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
     <tradeTags>
       <li>AnimalPet</li>
       <li>AnimalFighter</li>
@@ -195,6 +167,5 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <description>TBA</description>
   </PawnKindDef>
 </Defs>

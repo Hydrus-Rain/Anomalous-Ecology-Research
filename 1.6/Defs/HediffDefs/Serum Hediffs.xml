@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+
+<!--    Serum Body Hediffs    -->
+
+  <HediffDef Name="SerumMutationBase" Abstract="True">
+    <defName>Hediff_SerumMutations</defName>
+	<comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600~900</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+	 <stages>
+      <li>
+          <painFactor>0.12</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentBase="SerumMutationBase">
+    <defName>AER_AshenSerum</defName>
+    <label>Ashen Salamander Serum Mutation</label>
+    <description>Cannot catch fire.</description>
+    <stages>
+      <li>
+        <statFactors>
+          <Flammability>0</Flammability>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
